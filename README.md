@@ -1,16 +1,42 @@
-# loan_eligibility_app
+# Loan Eligibility App
 
-A new Flutter project.
+A simple and user-friendly Flutter application that helps users check their loan eligibility based on age, income, expenses, credit score, and employment type. The app provides instant results with a clean UI and smooth user experience. All calculations happen locally on the device, ensuring full privacy.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Calculate loan eligibility instantly  
+- Input fields for age, income, expenses, and credit score  
+- Employment type selection  
+- Toggle for existing loans  
+- Real-time form validation  
+- Clean, modern, and responsive UI  
+- Works completely offline  
+- No data collection or storage  
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tech Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter (Dart)
+- Clean Architecture
+- State Management: BLoC
+
+## Project Structure
+
+lib/
+├── core/
+├── domain/
+├── presentation/
+└── main.dart
+
+
+## Build Release APK
+
+To generate a release APK:
+
+flutter build apk --release
+
+
+The APK will be located at:
+
+build/app/outputs/flutter-apk/app-release.apk
+

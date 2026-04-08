@@ -34,6 +34,29 @@ class _LoanFormWidgetState extends State<LoanFormWidget> {
     super.dispose();
   }
 
+  void _clearForm() {
+    _ageController.clear();
+    _incomeController.clear();
+    _expensesController.clear();
+    _creditScoreController.clear();
+
+    setState(() {
+      _hasExistingLoan = false;
+      _employmentType = EmploymentType.salaried;
+    });
+
+    widget.onChanged(
+      LoanInputEntity(
+        age: 0,
+        income: 0,
+        expenses: 0,
+        hasExistingLoans: false,
+        creditScore: 0,
+        employmentType: EmploymentType.salaried,
+      ),
+    );
+  }
+
   void _updateInput() {
     if (!_formKey.currentState!.validate()) return;
 
@@ -202,6 +225,31 @@ class _LoanFormWidgetState extends State<LoanFormWidget> {
                 _updateInput();
               }
             },
+          ),
+          const SizedBox(height: 20),
+
+          Center(
+            child: OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                side: BorderSide(color: Colors.redAccent.withValues(alpha: 0.4)),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 12,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              onPressed: _clearForm,
+              child: const Text(
+                "Clear All",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.redAccent,
+                ),
+              ),
+            ),
           ),
 
           const SizedBox(height: 10),
