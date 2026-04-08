@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:loan_eligibility_app/core/theme/app_text_styles.dart';
-
 import '../../domain/entities/loan_input_entity.dart';
 import 'custom_text_field.dart';
 
@@ -79,12 +78,12 @@ class _LoanFormWidgetState extends State<LoanFormWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // ---------------- TITLE ----------------
+          // TITLE
           Text("Applicant Details", style: AppTextStyles.title),
 
           const SizedBox(height: 20),
 
-          // ---------------- AGE ----------------
+          // AGE
           CustomTextField(
             controller: _ageController,
             label: "Age",
@@ -106,7 +105,7 @@ class _LoanFormWidgetState extends State<LoanFormWidget> {
 
           const SizedBox(height: 16),
 
-          // ---------------- INCOME ----------------
+          // INCOME 
           CustomTextField(
             controller: _incomeController,
             label: "Monthly Income",
@@ -125,7 +124,7 @@ class _LoanFormWidgetState extends State<LoanFormWidget> {
 
           const SizedBox(height: 16),
 
-          // ---------------- EXPENSES ----------------
+          // EXPENSES 
           CustomTextField(
             controller: _expensesController,
             label: "Monthly Expenses",
@@ -147,7 +146,7 @@ class _LoanFormWidgetState extends State<LoanFormWidget> {
 
           const SizedBox(height: 16),
 
-          // ---------------- CREDIT SCORE ----------------
+          // CREDIT SCORE 
           CustomTextField(
             controller: _creditScoreController,
             label: "Credit Score",
@@ -173,7 +172,7 @@ class _LoanFormWidgetState extends State<LoanFormWidget> {
 
           const SizedBox(height: 22),
 
-          // ---------------- EXISTING LOAN ----------------
+          // EXISTING LOAN 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -190,7 +189,7 @@ class _LoanFormWidgetState extends State<LoanFormWidget> {
 
           const SizedBox(height: 22),
 
-          // ---------------- EMPLOYMENT TYPE ----------------
+          // EMPLOYMENT TYPE 
           Text("Employment Type", style: AppTextStyles.subtitle),
 
           const SizedBox(height: 10),

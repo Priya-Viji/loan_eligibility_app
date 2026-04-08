@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:loan_eligibility_app/features/loan/domain/entities/loan_input_entity.dart';
 import 'package:loan_eligibility_app/features/loan/presentation/bloc/loan_bloc.dart';
 import 'package:loan_eligibility_app/features/loan/presentation/bloc/loan_event.dart';
 import 'package:loan_eligibility_app/features/loan/presentation/bloc/loan_state.dart';
-
 import '../widgets/calculate_button.dart';
 import '../widgets/loan_form_widget.dart';
 import '../widgets/result_card.dart';
@@ -57,7 +55,7 @@ class _LoanPageState extends State<LoanPage> {
 
       body: Column(
         children: [
-          // ---------------- HEADER ----------------
+          // HEADER 
           Container(
             height: 170,
             width: double.infinity,
@@ -86,7 +84,7 @@ class _LoanPageState extends State<LoanPage> {
             ),
           ),
 
-          // ---------------- BODY ----------------
+          // BODY 
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
@@ -102,7 +100,7 @@ class _LoanPageState extends State<LoanPage> {
                       children: [
                         const SizedBox(height: 12),
 
-                        // ---------------- FORM CARD ----------------
+                        // FORM CARD 
                         Container(
                           padding: const EdgeInsets.all(22),
                           decoration: BoxDecoration(
@@ -123,7 +121,7 @@ class _LoanPageState extends State<LoanPage> {
 
                         const SizedBox(height: 22),
 
-                        // ---------------- BUTTON ----------------
+                        // BUTTON
                         CalculateButtonWidget(
                           onPressed: () {
                             if (_formInput != null) {
@@ -135,7 +133,7 @@ class _LoanPageState extends State<LoanPage> {
 
                         const SizedBox(height: 22),
 
-                        // ---------------- RESULT CARD ----------------
+                        // RESULT CARD 
                         if (state is LoanEvaluated)
                           AnimatedOpacity(
                             opacity: 1,
